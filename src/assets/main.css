@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Work_Sans;
+    src: url('../assets/font/Work_Sans/WorkSans-VariableFont_wght.ttf');
+  }
+  
+  * {
+    font-family: Work_Sans !important;
+  }
+
+.container-wrapper {
+    max-width: 1400px;
+    padding: 0px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input:focus{
+    outline: none;
+  }
+  
