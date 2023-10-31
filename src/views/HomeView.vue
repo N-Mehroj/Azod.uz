@@ -24,11 +24,20 @@
     
 </template>
 <script setup>
-const callback = (response) => {
-  // This callback will be triggered when the user selects or login to
-  // his Google account from the popup
-  console.log("Handle the response", response)
-}
+import { onMounted } from "vue"
+import { googleOneTap } from "vue3-google-login"
+
+onMounted(() => {
+  googleOneTap()
+    .then((response) => {
+      // This promise is resolved when user selects an account from the the One Tap prompt
+      console.log("Handle the response", response)
+    })
+    .catch((error) => {
+      console.log("Handle the error", error)
+    })
+})
+
 </script>
 <script>
 import { ImageBanner, AuthImg, } from "../constants/";
