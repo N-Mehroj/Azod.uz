@@ -21,31 +21,9 @@
         <div class="flex justify-center mb-10 cursor-pointer">
             <p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500">View All Post</p>
         </div>
-        <GoogleLogin :callback="callback" prompt auto-login/>
     </div>
 </template>
-<script setup>
-import { onMounted } from "vue"
-import { googleOneTap } from "vue3-google-login"
-import { decodeCredential } from 'vue3-google-login'
 
-// onMounted(() => {
-//   googleOneTap()
-//     .then((response) => {
-//       // This promise is resolved when user selects an account from the the One Tap prompt
-//          const userData = decodeCredential(response.credential)
-//          console.log("Handle the userData", userData)
-//     })
-//     .catch((error) => {
-//       console.log("Handle the error", error)
-//     })
-// })
-const callback = (response) => {
-    const userData = decodeCredential(response.credential)
-    console.log("Handle the userData", userData)
-}
-
-</script>
 <script>
 import { ImageBanner, AuthImg, } from "../constants/";
 import { Product } from '@/components/'
