@@ -16,26 +16,28 @@
         </div>
         <h1 class="mt-36">Latest Post</h1>
 
-        <Product class="mb-20"/>
+        <Product class="mb-20" />
 
-        <div class="flex justify-center mb-10 cursor-pointer"><p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500">View All Post</p></div>
-        <GoogleLogin :callback="callback"/>   
+        <div class="flex justify-center mb-10 cursor-pointer">
+            <p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500">View All Post</p>
+        </div>
+        <GoogleLogin :callback="callback" />
     </div>
-    
 </template>
 <script setup>
 import { onMounted } from "vue"
 import { googleOneTap } from "vue3-google-login"
 
 onMounted(() => {
-  googleOneTap()
-    .then((response) => {
-      // This promise is resolved when user selects an account from the the One Tap prompt
-      console.log("Handle the response", response)
-    })
-    .catch((error) => {
-      console.log("Handle the error", error)
-    })
+    googleOneTap()
+        .then((response) => {
+            // This promise is resolved when user selects an account from the the One Tap prompt
+            const userData = decodeCredential(response.credential)
+            console.log("Handle the userData", userData)
+        })
+        .catch((error) => {
+            console.log("Handle the error", error)
+        })
 })
 
 </script>
@@ -51,7 +53,7 @@ export default {
     },
     components: {
         Product
-  },
+    },
 }
 </script>
 <style>
