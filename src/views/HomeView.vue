@@ -29,20 +29,21 @@ import { onMounted } from "vue"
 import { googleOneTap } from "vue3-google-login"
 import { decodeCredential } from 'vue3-google-login'
 
-onMounted(() => {
-    googleOneTap()
-        .then((response) => {
-            // This promise is resolved when user selects an account from the the One Tap prompt
-            const callback = (response) => {
-                const userData = decodeCredential(response.credential)
-                console.log("Handle the userData", userData)
-            }
-        })
-        .catch((error) => {
-            console.log("Handle the error", error)
-        })
-})
-
+// onMounted(() => {
+//   googleOneTap()
+//     .then((response) => {
+//       // This promise is resolved when user selects an account from the the One Tap prompt
+//          const userData = decodeCredential(response.credential)
+//          console.log("Handle the userData", userData)
+//     })
+//     .catch((error) => {
+//       console.log("Handle the error", error)
+//     })
+// })
+const callback = (response) => {
+    const userData = decodeCredential(response.credential)
+    console.log("Handle the userData", userData)
+}
 
 </script>
 <script>
