@@ -14,7 +14,8 @@ const app = createApp(App)
 //   })
 import vue3GoogleLogin from 'vue3-google-login'
 app.use(vue3GoogleLogin, {
-    clientId: '452933626521-2qo5obf75ugh47drptutnu8obmq7pcan.apps.googleusercontent.com'
+    clientId: '452933626521-2qo5obf75ugh47drptutnu8obmq7pcan.apps.googleusercontent.com',
+    scope: 'email profile openid',
   })
 
 
