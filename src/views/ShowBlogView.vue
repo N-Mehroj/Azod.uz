@@ -75,6 +75,7 @@
 
     </div>
 </template>
+
 <script>
 import { AuthImg, ImageBanner } from "../constants/";
 

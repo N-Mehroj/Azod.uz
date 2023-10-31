@@ -9,6 +9,7 @@
           <li class="p-2 mx-2"><RouterLink :to="{ name: 'posts' }">Postlar</RouterLink></li>
           <li class="p-2 mx-2"><a href="#">Saxifalar</a></li>
           <li class="p-2 mx-2"><a href="#">Bog'lanish</a></li>
+          <div class="btn">google</div>
         </div>
         <div class="action flex">
           <div class="flex items-center bg-[#F4F4F5] rounded-lg px-2">

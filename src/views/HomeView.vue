@@ -19,9 +19,17 @@
         <Product class="mb-20"/>
 
         <div class="flex justify-center mb-10 cursor-pointer"><p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500">View All Post</p></div>
-       
+        <GoogleLogin :callback="callback"/>   
     </div>
+    
 </template>
+<script setup>
+const callback = (response) => {
+  // This callback will be triggered when the user selects or login to
+  // his Google account from the popup
+  console.log("Handle the response", response)
+}
+</script>
 <script>
 import { ImageBanner, AuthImg, } from "../constants/";
 import { Product } from '@/components/'
