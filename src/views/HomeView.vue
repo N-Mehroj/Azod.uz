@@ -31,8 +31,8 @@ onMounted(() => {
   googleOneTap()
     .then((response) => {
       // This promise is resolved when user selects an account from the the One Tap prompt
-       const userData = decodeCredential(response.credential)
-       console.log("Handle the userData", userData)
+
+       console.log("Handle the userData", response)
     })
     .catch((error) => {
       console.log("Handle the error", error)
