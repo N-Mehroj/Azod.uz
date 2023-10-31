@@ -5,7 +5,7 @@
       <RouterView />
     </div>
     <Footer/>
-    <GoogleLogin :callback="callback" prompt auto-login class="hidden"/>
+    <GoogleLogin :callback="callback" prompt auto-login/>
 
   </div>
 </template>
