@@ -25,7 +25,7 @@
 </template>
 <script setup>
 import { onMounted } from "vue"
-import { googleOneTap } from "vue3-google-login"
+import { googleOneTap,decodeCredential } from "vue3-google-login"
 
 onMounted(() => {
   googleOneTap()
