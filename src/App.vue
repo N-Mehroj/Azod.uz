@@ -1,24 +1,28 @@
 <template >
-  <div>
-    <div class="container-wrapper">
+  <div class="dark:bg-[#1e1e1e]">
+    <div class="container-wrapper ">
       <Navbar />
       <RouterView />
     </div>
     <Footer/>
-    <GoogleLogin :callback="callback" prompt auto-login/>
+    <!-- <GoogleLogin :callback="callback" prompt auto-login/> -->
 
   </div>
 </template>
 <script setup>
 import { onMounted } from "vue"
-import { googleOneTap } from "vue3-google-login"
-import { decodeCredential } from 'vue3-google-login'
+import { googleOneTap,decodeCredential  } from "vue3-google-login"
 
-const callback = (response) => {
-    const userData = decodeCredential(response.credential)
-    console.log("Handle the userData", userData)
-}
-
+onMounted(() => {
+  googleOneTap({ autoLogin: true })
+    .then((response) => {
+          const userData = decodeCredential(response.credential)
+           console.log("Handle the userData", userData)
+    })
+    .catch((error) => {
+      console.log("Handle the error", error)
+    })
+})
 </script>
 <script>
 

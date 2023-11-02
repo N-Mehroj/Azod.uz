@@ -1,49 +1,72 @@
 <template>
   <div>
     <nav>
-      <div class="nav flex justify-between pt-6">
-        <img :src="logo" alt="" class="h-9" />
-        <div class="flex items-center aLink">
-          <li class="p-2 mx-2">
+      <div class="nav flex justify-between pt-6 ">
+        <h1 class="bace_logo pt-1 dark:text-white">Azod.uz</h1>
+        <div class="lg:flex items-center aLink md:hidden hidden">
+          <li class="p-2 mx-2 dark:text-white">
             <RouterLink :to="{ name: 'home' }">Bosh sahifa</RouterLink>
           </li>
-          <li class="p-2 mx-2">
+          <li class="p-2 mx-2 dark:text-white">
             <RouterLink :to="{ name: 'blog' }">Blog</RouterLink>
           </li>
-          <li class="p-2 mx-2">
+          <li class="p-2 mx-2 dark:text-white">
             <RouterLink :to="{ name: 'posts' }">Postlar</RouterLink>
           </li>
-          <li class="p-2 mx-2"><a href="#">Saxifalar</a></li>
-          <li class="p-2 mx-2"><a href="#">Bog'lanish</a></li>
-          <div class="btn">google</div>
+          <li class="p-2 mx-2 dark:text-white"><a href="#">Saxifalar</a></li>
+          <li class="p-2 mx-2 dark:text-white"><a href="#">Bog'lanish</a></li>
         </div>
         <div class="action flex">
           <div class="flex items-center bg-[#F4F4F5] rounded-lg px-2">
-            <input type="text" placeholder="Search" class="bg-[#F4F4F5] py-2 pl-3 w-48" />
+            <input type="text" placeholder="Search" class="bg-[#F4F4F5] py-2 pl-3 lg:w-36 md:w-40 w-full" />
             <IconSearch class="mr-3" :size="22" />
           </div>
-          <label class="relative inline-flex items-center mb-2 ml-8 cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer" />
+          <label class="relative md:inline-flex items-center mb-2 ml-8 cursor-pointer sm:hidden hidden ">
+            <input type="checkbox" class="sr-only peer dark:bg-gray-200" @change="handleCheckboxChange" v-model="isDark" />
             <div
               class="w-12 h-7 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[5px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-al peer-checked:bg-blue-600">
             </div>
-
           </label>
+          <IconMenu2 class="lg:hidden  md:inline mx-3 cursor-pointer" :size="35" />
         </div>
       </div>
     </nav>
   </div>
 </template>
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+
+</script>
 <script>
 import { logo } from "../constants/";
-import { IconSearch } from "@tabler/icons-vue";
+import { IconSearch, IconMenu2 } from "@tabler/icons-vue";
+
+import { mapState, mapActions } from "pinia";
+import { useStoreData } from "@/store/store";
+
 export default {
   data() {
     return {
       logo,
     };
   },
-  components: { IconSearch },
+  components: {
+    IconSearch,
+    IconMenu2,
+  },
+  computed: {
+    // ...mapState(useStoreData, ["modeData"]),
+  },
+  methods: {
+    // handleCheckboxChange(event) {
+    //   let mode = event.target.checked ? 'dark' : 'light';
+    //   window.localStorage.setItem("mode", mode);
+    //   // console.log(this.modeData);
+    // }
+  }
 };
 </script>
 <style>

@@ -2,6 +2,10 @@
     font-family: Work_Sans;
     src: url('../assets/font/Work_Sans/WorkSans-VariableFont_wght.ttf');
   }
+@font-face {
+    font-family: Sanchez;
+    src: url('../assets/font/Sanchez/Sanchez-Regular.ttf');
+  }
   
   * {
     font-family: Work_Sans !important;
@@ -18,5 +22,8 @@
   }
   .nsm7Bb-HzV7m-LgbsSe-MJoBVe{
     display: none !important;
+  }
+  .bace_logo{
+    font-family: Sanchez !important;
   }
   

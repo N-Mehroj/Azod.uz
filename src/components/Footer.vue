@@ -1,67 +1,44 @@
 <template >
-    <div class="w-full bg-[#F6F6F7] pt-14 pb-10 mt-20">
-        <div class="container-wrapper flex">
-            <div class="mr-32">
-                <h2>About</h2>
-                <p class="w-72">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <div class="flex mt-2">
-                    <h5>Email: </h5>
-                    <p>info@jstemplate.net</p>
-                </div>
-                <div class="flex">
-                    <h5>Phone: </h5>
-                    <p>880 123 456 789</p>
-                </div>
-            </div>
-            <div class="mr-28">
-                <h2>Quick Link</h2>
-                <ul class="mt-5">
-                    <li class="my-2"><a href="#">Home</a></li>
-                    <li class="my-2"><a href="#">About</a></li>
-                    <li class="my-2"><a href="#">Blog</a></li>
-                    <li class="my-2"><a href="#">Archived</a></li>
-                    <li class="my-2"><a href="#">Author</a></li>
-                    <li class="my-2"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="mr-28">
-                <h2>Category</h2>
-                <ul class="mt-5">
-                    <li class="my-2"><a href="#">Lifestyle</a></li>
-                    <li class="my-2"><a href="#">Technology</a></li>
-                    <li class="my-2"><a href="#">Travel</a></li>
-                    <li class="my-2"><a href="#">Business</a></li>
-                    <li class="my-2"><a href="#">Economy</a></li>
-                    <li class="my-2"><a href="#">Sports</a></li>
-                </ul>
+    <footer class="footer footer-center pt-16 bg-base-200 text-base-content bg-[#f7f7f8] dark:bg-[#252527] mt-16">
+        <div class="container">
+            <div class="flex gap-12 justify-center">
+                <a class="link link-hover dark:text-white">About us</a>
+                <a class="link link-hover dark:text-white">Contact</a>
+                <a class="link link-hover dark:text-white">Jobs</a>
+                <a class="link link-hover dark:text-white">Press kit</a>
             </div>
 
-            <div class="p-8 rounded-lg bg-white text-center w-[450px]">
-                <h3>Weekly Newsletter</h3>
-                <p>Get blog articles and offers via email</p>
-                <div class="mt-5 flex items-center border rounded-lg px-2 ">
-                    <input type="text" placeholder="Email" class=" py-2 pl-3 w-full" />
-                    <IconMail class="mr-3" :size="22" />
-                </div>
-                <div class="bg-[#4b6bfb] mt-3 py-3 rounded-lg text-white cursor-pointer">Subscribe</div>
+            <div class="flex gap-7 justify-center mt-5">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current text-gray-500 dark:text-white">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current text-gray-500 dark:text-white">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current text-gray-500 dark:text-white">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
             </div>
         </div>
-
-        <div class="container-wrapper mt-20   border-t-2">
-            <div class="pt-8 items-center flex justify-between">
-                <div class="im">
-                    <img :src="Copyright" alt="">
-                </div>
-                <div class="nav flex">
-                    <li class="p-2 mx-2"><a href="#">Terms of Use</a></li>
-                    <li class="p-2 mx-2"><a href="#">Privacy Policy</a></li>
-                    <li class="p-2 mx-2"><a href="#">Cookie Policy</a></li>
-                </div>
-            </div>
+        <div class="text-center  bg-[#eeeef0] py-5 mt-8 dark:bg-[#252527] dark:text-white">
+            <p>Copyright © {{ date }} - All right reserved by ACME Industries Ltd</p>
         </div>
-    </div>
+    </footer>
 </template>
+<script setup>
+let date;
+if (new Date().getFullYear() != '2023') {
+    date = "2023 - " + new Date().getFullYear();
+} else {
+    date = new Date().getFullYear();
+}
+</script>
 <script>
 import { Copyright } from "../constants/";
 
