@@ -2,16 +2,16 @@
   <div>
     <nav>
       <div class="nav flex justify-between pt-6 ">
-        <h1 class="bace_logo pt-1 dark:text-white">Azod.uz</h1>
+        <RouterLink :to="{ name: 'home' }" class="bace_logo pt-1 dark:text-white text-3xl font-semibold">Azod.uz</RouterLink>
         <div class="lg:flex items-center aLink md:hidden hidden">
           <li class="p-2 mx-2 dark:text-white">
-            <RouterLink :to="{ name: 'home' }">Bosh sahifa</RouterLink>
+            <RouterLink :to="{ name: 'home' }" class="py-3">Bosh sahifa</RouterLink>
           </li>
           <li class="p-2 mx-2 dark:text-white">
-            <RouterLink :to="{ name: 'blog' }">Blog</RouterLink>
+            <RouterLink :to="{ name: 'blog' }" class="py-3">Blog</RouterLink>
           </li>
           <li class="p-2 mx-2 dark:text-white">
-            <RouterLink :to="{ name: 'posts' }">Postlar</RouterLink>
+            <RouterLink :to="{ name: 'posts' }" class="py-3">Postlar</RouterLink>
           </li>
           <li class="p-2 mx-2 dark:text-white"><a href="#">Saxifalar</a></li>
           <li class="p-2 mx-2 dark:text-white"><a href="#">Bog'lanish</a></li>
