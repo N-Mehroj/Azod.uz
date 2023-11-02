@@ -19,7 +19,7 @@
                  </p>
              </div>
         </div>
-        <h1>Latest Post</h1>
+        <h1 class="dark:text-white">Latest Post</h1>
         <Product/>
     </div>
 </template>
