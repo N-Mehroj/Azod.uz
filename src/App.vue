@@ -25,7 +25,7 @@ onMounted(() => {
              store.users(userData)
      })
      .catch((error) => {
-          store.getUsers()
+              console.log("Handle the userData", error)
      })
  }else if(localStorage.getItem('token') != null){
     store.getUsers()
