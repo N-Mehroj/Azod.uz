@@ -10,6 +10,7 @@
   "dependencies": {
     "@tabler/icons-vue": "^2.40.0",
     "@vueuse/core": "^10.5.0",
+    "axios": "^1.6.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.4",
     "vue-google-oauth2": "^1.5.10",

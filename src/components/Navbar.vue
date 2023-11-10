@@ -26,7 +26,7 @@
             <div
               class="w-12 h-7 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[5px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-al peer-checked:bg-blue-600">
             </div>
-            <!-- comment -->
+
           </label>
           <IconMenu2 class="lg:hidden  md:inline mx-3 cursor-pointer" :size="35" />
         </div>
