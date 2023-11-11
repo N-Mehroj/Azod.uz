@@ -36,10 +36,37 @@
 </template>
 <script setup>
 import { useDark, useToggle } from '@vueuse/core'
+import { onMounted } from "vue"
+import { googleOneTap,decodeCredential  } from "vue3-google-login"
+import { useStoreData } from "@/store/store";
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
+
+
+const store = useStoreData()
+
+onMounted(() => {
+ if(localStorage.getItem('token') == null){
+   googleOneTap({ autoLogin: true })
+     .then((response) => {
+           const userData = decodeCredential(response.credential)
+            console.log("Handle the userData", userData)
+             store.users(userData)
+     })
+     .catch((error) => {
+              console.log("Handle the userData", error)
+     })
+ }else if(localStorage.getItem('token') != null){
+    store.getUsers()
+ } else{
+    store.getUsers()
+ }
+    // return {
+    //   user,
+    // }
+})
 </script>
 <script>
 import { logo } from "../constants/";

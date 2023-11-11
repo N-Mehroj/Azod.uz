@@ -45,7 +45,7 @@ class DiscussionController extends Controller
                 ]);
                 $disc->save();
                 return response()->json(['message' => 'User saved successfully', 'disc' => $disc], 201);
-            }else{
+            } else {
                 $disc = new ReplyMessages([
                     'message' => $message,
                     'reply_messageId' => $replyId,
@@ -71,30 +71,34 @@ class DiscussionController extends Controller
     public function show(Request $request)
     {
         $id = $_GET['data'];
-        $discu = Discussion::where('blog_id', $id)->with('user','reply_message')->orderBy('created_at', 'desc')->get();
+        $discu = Discussion::where('blog_id', $id)->count();
+        if ($discu != null) {
+        $discu = Discussion::where('blog_id', $id)->with('user', 'reply_message')->orderBy('created_at', 'desc')->get();
+            $newData = [];
+            // $resData = [];
+            foreach ($discu as $items) {
+                $newItem = [
+                    'id' => $items['id'],
+                    'message' => $items['message'],
+                    'like_count' => $items['like_count'],
+                    'userId' => $items['userId'],
+                    'blog_id' => $items['blog_id'],
+                    'like_count' => $items['like_count'],
+                    'report_count' => $items['report_count'],
+                    'user' => $items['user'],
+                    'reply_messages' => $items['reply_message'],
+                    'created_at' => $items['created_at'],
+                    'updated_at' => $items['updated_at'],
 
-        $newData = [];
-        // $resData = [];
-        foreach ($discu as $items) {
-            $newItem = [
-                'id' => $items['id'],
-                'message' => $items['message'],
-                'like_count' => $items['like_count'],
-                'userId' => $items['userId'],
-                'blog_id' => $items['blog_id'],
-                'like_count' => $items['like_count'],
-                'report_count' => $items['report_count'],
-                'user' => $items['user'],
-                'reply_messages' => $items['reply_message'],
-                'created_at' => $items['created_at'],
-                'updated_at' => $items['updated_at'],
+                ];
+            };
 
-            ];
-        };
+            $newData[] = $newItem;
 
-        $newData[] = $newItem;
-
-        return ["userInChat" => $discu];
+            return ["userInChat" => $discu];
+        }else{
+            return ["data" => 'null'];
+        }
     }
 
     /**

@@ -65,12 +65,10 @@ export const useStoreData = defineStore("dataStore", {
           .then((response) => {
             // this.user = response.data.user;
             // console.log(response.data);
-            this.isLogedIn = true;
             resolve(response.data);
           })
           .catch((error) => {
             this.error = error;
-            this.isLogedIn = false;
             reject(error.response.data);
           })
           .finally(() => {

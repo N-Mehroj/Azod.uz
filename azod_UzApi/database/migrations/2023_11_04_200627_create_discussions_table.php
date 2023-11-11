@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('discussions', function (Blueprint $table) {
             $table->id();
             $table->text('message');
-            $table->integer('reply_messageId');
             $table->integer('like_count')->nullable()->default(0);
             $table->integer('report_count')->nullable()->default(0);
             $table->unsignedBigInteger('userId');
