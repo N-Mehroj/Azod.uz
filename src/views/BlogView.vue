@@ -16,7 +16,7 @@
                 <div class="tag px-2 text-white bg-[#4b6bfb] inline-block rounded-md">
                     <p>Technology</p>
                 </div>
-                <h1 class="text-white dark:text-white">The Impact of Technology on the <br/> Workplace:  How Technology is Changing</h1>
+                <h1 class="text-white dark:text-white">The Impact of Technology on the <br/> Ishchi muhit:  How Technology is Changing</h1>
                 <div class="flex mt-2">
                     <img :src="AuthImg" alt="">
                     <p class="px-3 text-[#97989F]">Jason Francisco</p>
