@@ -1,9 +1,9 @@
 <template >
     <div class="text-center py-10 mt-10">
-        <h1 class="dark:text-white">Page TItle</h1>
+        <h1 class="dark:text-white">Sahifa sarlavhasi</h1>
         <ul class="flex justify-center mt-2">
             <li class="pr-3 border-r-2 dark:text-white">
-                <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+                <RouterLink :to="{ name: 'home' }">Bosh sahifa</RouterLink>
             </li>
             <li class="pl-3 text-gray-400">
                 <RouterLink :to="{ name: 'home' }">Link one</RouterLink>
@@ -16,7 +16,7 @@
                 <div class="tag px-2 text-white bg-[#4b6bfb] inline-block rounded-md">
                     <p>Technology</p>
                 </div>
-                <h1 class="text-white dark:text-white">The Impact of Technology on the <br/> Workplace:  How Technology is Changing</h1>
+                <h1 class="text-white dark:text-white">The Impact of Technology on the <br/> Ishchi muhit:  How Technology is Changing</h1>
                 <div class="flex mt-2">
                     <img :src="AuthImg" alt="">
                     <p class="px-3 text-[#97989F]">Jason Francisco</p>
@@ -27,7 +27,7 @@
     </div>
       <Product class="my-20"/>
       
-    <div class="flex justify-center mb-10 cursor-pointer"><p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500 dark:text-white">View All Post</p></div>
+    <div class="flex justify-center mb-10 cursor-pointer"><p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500 dark:text-white">Barchasini ko'rsatish</p></div>
 
 </template>
 <script>

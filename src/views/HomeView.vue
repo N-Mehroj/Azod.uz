@@ -15,12 +15,12 @@
             </div>
         </div>
 
-        <h1 class="md:mt-36 dark:text-white">Latest Post</h1>
+        <h1 class="md:mt-36 dark:text-white">So'nggi yangiliklar</h1>
 
         <Product class="mb-20" />
 
         <div class="flex justify-center mb-10 cursor-pointer ">
-            <p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500 dark:border-white dark:text-white">View All Post</p>
+            <p class="border border-spacing-5 rounded-md px-3 py-3 border-gray-400 text-gray-500 dark:border-white dark:text-white">Barchasini ko'rsatish</p>
         </div>
     </div>
 </template>
