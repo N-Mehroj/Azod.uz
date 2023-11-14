@@ -2,9 +2,9 @@
     <footer class="footer footer-center pt-16 bg-base-200 text-base-content bg-[#f7f7f8] dark:bg-[#252527] mt-16">
         <div class="container">
             <div class="flex gap-12 justify-center">
-                <a class="link link-hover dark:text-white">About us</a>
-                <a class="link link-hover dark:text-white">Contact</a>
-                <a class="link link-hover dark:text-white">Jobs</a>
+                <a class="link link-hover dark:text-white">Biz haqimizda</a>
+                <a class="link link-hover dark:text-white">Kontakt</a>
+                <a class="link link-hover dark:text-white">Ishlar</a>
                 <a class="link link-hover dark:text-white">Press kit</a>
             </div>
 
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="text-center  bg-[#eeeef0] py-5 mt-8 dark:bg-[#252527] dark:text-white">
-            <p>Copyright © {{ date }} - All right reserved by ACME Industries Ltd</p>
+            <p>Mualliflik huquqi © {{ date }} - Barcha huquqlar Azod.uz tomonidan himoyalangan</p>
         </div>
     </footer>
 </template>

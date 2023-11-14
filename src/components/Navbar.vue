@@ -18,7 +18,7 @@
         </div>
         <div class="action flex">
           <div class="flex items-center bg-[#F4F4F5] rounded-lg px-2">
-            <input type="text" placeholder="Search" class="bg-[#F4F4F5] py-2 pl-3 lg:w-36 md:w-40 w-full" />
+            <input type="text" placeholder="Izlash" class="bg-[#F4F4F5] py-2 pl-3 lg:w-36 md:w-40 w-full" />
             <IconSearch class="mr-3" :size="22" />
           </div>
           <label class="relative md:inline-flex items-center mb-2 ml-8 cursor-pointer sm:hidden hidden ">
