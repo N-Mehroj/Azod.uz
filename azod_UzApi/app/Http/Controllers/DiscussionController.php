@@ -34,6 +34,7 @@ class DiscussionController extends Controller
         $replyId = $request['replyId'];
         $userId = $request['userId'];
 
+
         $replyUserId = $request['replyUserId'];
 
         if ($message != null) {
